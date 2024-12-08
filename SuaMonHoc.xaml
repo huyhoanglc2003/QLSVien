@@ -1,0 +1,26 @@
+﻿<Window x:Class="QuanLySinhVien.SuaMonHoc"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuanLySinhVien"
+        mc:Ignorable="d"
+        Title="SuaMonHoc" Height="450" Width="800">
+    <Grid>
+        <StackPanel Margin="10,10,681,10">
+            <Label Content="Mã môn học" HorizontalAlignment="Left" Width="100" Height="25" Margin="0,0,0,20" />
+            <Label Content="Tên môn học" HorizontalAlignment="Left" Width="100" Height="25" Margin="0,0,0,20" />
+            <Label Content="Số tiết lý thuyết" HorizontalAlignment="Left" Width="100" Height="25" Margin="0,0,0,20" />
+            <Label Content="Số tiết thực hành" HorizontalAlignment="Left" Width="100" Height="25" Margin="0,0,0,20" />
+            <Label Content="Số tín chỉ" HorizontalAlignment="Left" Width="100" Height="25" Margin="0,0,0,20" />
+        </StackPanel>
+        <StackPanel Margin="124,10,20,10">
+            <TextBox x:Name="EditMaMHTextBox" Margin="0,0,0,20" Text="{Binding Mamh}" Height="25" />
+            <TextBox x:Name="EditTenMHTextBox" Margin="0,0,0,20" Height="25" Text="{Binding Tenmh}" />
+            <TextBox x:Name="EditSotietlythuyetTextBox" Margin="0,0,0,20" Height="25" Text="{Binding Sotietlythuyet}" />
+            <TextBox x:Name="EditSotietthuchanhTextBox" Margin="0,0,0,20" Height="25" Text="{Binding Sotietthucthanh}" />
+            <TextBox x:Name="EditSotinchiTextBox" Margin="0,0,0,20" Height="25" Text="{Binding Sotinchi}" />
+            <Button Content="Sửa" Command="{Binding SaveCommand}" Click="Sua_Click" />
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,21 @@
+﻿<Window x:Class="QuanLySinhVien.ThongTinSinhVien"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuanLySinhVien"
+        mc:Ignorable="d"
+        Title="ThongTinSinhVien" Height="450" Width="800" Loaded="Window_Loaded2">
+    <Grid>
+        <DataGrid x:Name="StudentsDataGrid"  AutoGenerateColumns="False" ItemsSource="{Binding courses}" Margin="0,10,0,163">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Mã lớp tín chỉ" Binding="{Binding Maloptc}" />
+                <DataGridTextColumn Header="Mã môn học" Binding="{Binding Mamh}" />
+                <DataGridTextColumn Header="Mã sinh viên" Binding="{Binding Masv}" />
+                <DataGridTextColumn Header="Điểm" Binding="{Binding Diem1}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Nhập điểm" Click="AddScore_Click" Margin="261,311,415,67" />
+        <Button Content="Xuât file" Click="Export_Click" Margin="405,311,271,67" />
+    </Grid>
+</Window>

@@ -1,0 +1,24 @@
+﻿<Window x:Class="QuanLySinhVien.QuanLyMonHoc"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuanLySinhVien"
+        mc:Ignorable="d"
+        Title="QuanLyMonHoc" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <!-- Courses DataGrid -->
+        <DataGrid x:Name="CoursesDataGrid"  AutoGenerateColumns="False" ItemsSource="{Binding courses}" Margin="0,10,0,163">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Mã môn học" Binding="{Binding Mamh}" />
+                <DataGridTextColumn Header="Tên môn học" Binding="{Binding Tenmh}" />
+                <DataGridTextColumn Header="Số tiết lý thuyết" Binding="{Binding Sotietlythuyet}" />
+                <DataGridTextColumn Header="Số tiết thực hành" Binding="{Binding Sotietthucthanh}" />
+                <DataGridTextColumn Header="Số tín chỉ" Binding="{Binding Sotinchi}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Thêm môn học" Click="AddCourse_Click" Margin="208,307,467,73" />
+        <Button Content="Sửa môn học" Click="EditCourse_Click" Margin="338,307,338,73" />
+        <Button Content="Xoá môn học" Click="DeleteCourse_Click" Margin="467,307,209,73" />
+    </Grid>
+</Window>

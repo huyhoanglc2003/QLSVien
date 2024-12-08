@@ -1,0 +1,26 @@
+﻿<Window x:Class="QuanLySinhVien.QuanLyTinChi"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuanLySinhVien"
+        mc:Ignorable="d"
+        Title="QuanLyTinChi" Height="450" Width="800" Loaded="Window_Loaded1">
+    <Grid>
+        <DataGrid x:Name="CreditsDataGrid"  AutoGenerateColumns="False" ItemsSource="{Binding courses}" Margin="0,10,0,163">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Mã lớp tín chỉ" Binding="{Binding Maloptc}" />
+                <DataGridTextColumn Header="Tên lớp tín chỉ" Binding="{Binding Tenloptc}" />
+                <DataGridTextColumn Header="Niên khoá" Binding="{Binding Nienkhoa}" />
+                <DataGridTextColumn Header="Học kì" Binding="{Binding Hocki}" />
+                <DataGridTextColumn Header="Số sinh viên tối thiểu" Binding="{Binding SoSvtoithieu}" />
+                <DataGridTextColumn Header="Thời khoá biểu" Binding="{Binding Thoikhoabieu}" />
+                <DataGridTextColumn Header="Mã giáo viên" Binding="{Binding Magv}" />
+                <DataGridTextColumn Header="Mã môn học" Binding="{Binding Mamh}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Thêm lớp tín chỉ" Click="AddCredits_Click" Margin="208,307,467,73" />
+        <Button Content="Sửa lớp tín chỉ" Click="EditCredits_Click" Margin="338,307,338,73" />
+        <Button Content="Xoá lớp tín chỉ" Click="DeleteCredits_Click" Margin="467,307,209,73" />
+    </Grid>
+</Window>

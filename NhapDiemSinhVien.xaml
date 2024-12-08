@@ -1,0 +1,24 @@
+﻿<Window x:Class="QuanLySinhVien.NhapDiemSinhVien"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuanLySinhVien"
+        mc:Ignorable="d"
+        Title="NhapDiemSinhVien" Height="450" Width="800">
+    <Grid>
+        <StackPanel Margin="10,10,681,10">
+            <Label Content="Mã lớp tín chỉ" HorizontalAlignment="Left" Width="100" Height="25" Margin="0,0,0,20" />
+            <Label Content="Mã môn học" HorizontalAlignment="Left" Width="100" Height="25" Margin="0,0,0,20" />
+            <Label Content="Mã sinh viên" HorizontalAlignment="Left" Width="100" Height="25" Margin="0,0,0,20" />
+            <Label Content="Điểm" HorizontalAlignment="Left" Width="100" Height="25" Margin="0,0,0,20" />
+        </StackPanel>
+        <StackPanel Margin="124,10,20,10">
+            <TextBox x:Name="addMaloptcTextBox" Margin="0,0,0,20" Text="{Binding Maloptc}" Height="25" />
+            <TextBox x:Name="addMamhTextBox" Margin="0,0,0,20" Height="25" Text="{Binding Mamh}" />
+            <TextBox x:Name="addMasvTextBox" Margin="0,0,0,20" Height="25" Text="{Binding Masv}" />
+            <TextBox x:Name="addDiemTextBox" Margin="0,0,0,20" Height="25" Text="{Binding Diem}" />
+            <Button Content="Nhập" Click="Add_Click" />
+        </StackPanel>
+    </Grid>
+</Window>

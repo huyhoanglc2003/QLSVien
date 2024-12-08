@@ -1,0 +1,32 @@
+﻿<Window x:Class="QuanLySinhVien.SuaLopTinChi"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuanLySinhVien"
+        mc:Ignorable="d"
+        Title="SuaLopTinChi" Height="450" Width="800">
+    <Grid>
+        <StackPanel Margin="10,10,627,10">
+        <Label Content="Mã lớp tín chỉ" HorizontalAlignment="Left" Width="100" Height="25" Margin="0,0,0,20" />
+        <Label Content="Tên lớp tín chỉ" HorizontalAlignment="Left" Width="100" Height="25" Margin="0,0,0,20" />
+        <Label Content="Niên khoá" HorizontalAlignment="Left" Width="100" Height="25" Margin="0,0,0,20" />
+        <Label Content="Học kì" HorizontalAlignment="Left" Width="100" Height="25" Margin="0,0,0,20" />
+        <Label Content="Số sinh viên tối thiểu" HorizontalAlignment="Left" Width="127" Height="25" Margin="0,0,0,20" />
+        <Label Content="Thời khoá biểu" HorizontalAlignment="Left" Width="100" Height="25" Margin="0,0,0,20" />
+        <Label Content="Mã giáo viên" HorizontalAlignment="Left" Width="100" Height="25" Margin="0,0,0,20" />
+        <Label Content="Mã môn học" HorizontalAlignment="Left" Width="100" Height="25" Margin="0,0,0,20" />
+        </StackPanel>
+        <StackPanel Margin="178,10,20,10">
+            <TextBox x:Name="NewMaloptcTextBox" Margin="0,0,0,20" Text="{Binding Maloptc}" Height="25" />
+            <TextBox x:Name="NewTenloptcTextBox" Margin="0,0,0,20" Height="25" Text="{Binding Tenloptc}" />
+            <TextBox x:Name="NewNienkhoaTextBox" Margin="0,0,0,20" Height="25" Text="{Binding Nienkhoa}" />
+            <TextBox x:Name="NewHockiTextBox" Margin="0,0,0,20" Height="25" Text="{Binding Hocki}" />
+            <TextBox x:Name="NewSosvtoithieuTextBox" Margin="0,0,0,20" Height="25" Text="{Binding SoSvtoithieu}" />
+            <TextBox x:Name="NewThoikhoabieuTextBox" Margin="0,0,0,20" Height="25" Text="{Binding Thoikhoabieu}" />
+            <TextBox x:Name="NewMagvTextBox" Margin="0,0,0,20" Height="25" Text="{Binding Magv}" />
+            <TextBox x:Name="NewMamhTextBox" Margin="0,0,0,20" Height="25" Text="{Binding Mamh}" />
+            <Button Content="Sửa"  Click="EditCredit_Click" />
+        </StackPanel>
+    </Grid>
+</Window>
